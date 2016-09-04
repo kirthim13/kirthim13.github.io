@@ -1,85 +1,190 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
-<svg width="1000" height="1000" 
-     viewPort="0 0 500 500" version="1.1"
-     xmlns="http://www.w3.org/2000/svg">
-	 <ellipse cx="200" cy="400" rx="20" ry="45" style="fill: yellow;stroke:red;stroke-width:2;"/>
-	 <line x1="202" y1="355" 
-          x2="550" y2="355" 
-          stroke="black" 
-          stroke-width="2"/>
-	<rect x="400" y="235" width="145" height="120" style="fill:yellow;stroke:red;stroke-width:2;"/>
-	<polygon points="400,235 380,220 565,220 545,235 " style="fill:grey;stroke:black;stroke-width:2;"/>
-	<rect x="425" y="260" width="100" height="60" style="fill:grey;stroke:black;stroke-width:2;"/>
-
-	
-	<rect x="220" y="290" width="40" height="65" style="fill:grey;stroke:black;stroke-width:2;"/>
-	<polygon points="220,285 240,265 260,285" style="fill:grey;stroke:black;stroke-width:2;"/>
-	
-	
-	<rect x="275" y="310" width="40" height="45" style="fill:grey;stroke:black;stroke-width:2;"/>
-	<polygon points="275,305 295,285 315,305" style="fill:grey;stroke:black;stroke-width:2;"/>
-		
-	<line x1="202" y1="445" 
-          x2="550" y2="445" 
-          stroke="black" 
-          stroke-width="2"/>
-	 
-	 <rect x="202" y="355" width="350" height="90" style="fill:grey; stroke:red;stroke-width:2;"/>
-
- 	 <ellipse cx="550" cy="400" rx="20" ry="45" style="fill: yellow;stroke:red;stroke-width:2;"/>
-	 
- 	 <rect x="568" y="380" width="80" height="35" style="fill:grey; stroke:red;stroke-width:2;"/>
-
-	 
-	 <rect x="650" y="290" width="200" height="150" style="fill:yellow; stroke:red;stroke-width:2;"/>
-     <polygon points="650,290 600,250 900,250 850,290" style="fill:grey;stroke:black;stroke-width:2;"/>
-	 <rect x="650" y="290" width="200" height="150" style="fill:yellow; stroke:red;stroke-width:2;"/>
-	 
-	 <rect x="650" y="290" width="200" height="150" style="fill:yellow; stroke:red;stroke-width:2;"/>
-	 <circle cx="690" cy="450" r="25" style:"fill:grey;stroke:black;stroke-width:2;"/>
- 	 <circle cx="810" cy="450" r="25" style:"fill:grey;stroke:black;stroke-width:2;"/>
-
-
-
-	 
-	 <circle cx="250" cy="450" r="25" style:"fill:grey;stroke:black;stroke-width:2;"/>
- 	 <circle cx="325" cy="450" r="25" style:"fill:grey;stroke:black;stroke-width:2;"/>
- 	 <circle cx="480" cy="450" r="35" style:"fill:grey;stroke:black;stroke-width:2;"/>
-
+<svg width="50" height="50">
 </svg>
 
 <script>
   console.log(d3); // test if d3 is loaded
+  
+  //Elements
+  var svgElements = d3.select("body")
+					.append("svg")
+					.attr("width",1000)
+					.attr("height",1000);
+						
+  var ellipse_front = svgElements.append("ellipse")
+			 .attr("cx",200)
+			 .attr("cy",400)
+			 .attr("rx",20)
+			 .attr("ry",45)
+			 .style("fill","teal")
+			 .style("stroke","black")
+			 .style("stroke-width",2);
 
-  /*
-  <svg width="100" height="100">
-<circle cx="50" cy="50" r="15"/>
-</svg>
+		  
+   var line_up = svgElements.append("line")
+						 .attr("x1",202)
+						 .attr("y1",355)
+						 .attr("x2",550)
+						 .attr("y2",355)
+						 .style("stroke","black")
+						 .style("stroke-width",2);
+						 
+	var rect_engine = svgElements.append("rect")
+								.attr("x",400)
+								.attr("y",235)
+								.attr("width",145)
+								.attr("height",120)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+    var polygon_engine = svgElements.append("polygon")
+							 .attr("points","400,235 380,220 565,220 545,235")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+						
+	var rect_window = svgElements.append("rect")
+								.attr("x",425)
+								.attr("y",260)
+								.attr("width",100)
+								.attr("height",60)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+	var rect_smoke1 = svgElements.append("rect")
+								.attr("x",220)
+								.attr("y",290)
+								.attr("width",40)
+								.attr("height",65)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+    var polygon_smoke1 = svgElements.append("polygon")
+							 .attr("points","220,285 240,265 260,285")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+	
 
- <svg width="100" height="100">
- <rect width="50" height="100"/>
- </svg>
- 
-<svg width="100" height="100">
- <rect width="50" height="100"/>
- </svg>
- 
-<svg width ="100" height="100">
-	<circle cx="50" cy="50" r="15"/>
-</svg>
-<svg height="1000" width="1000">
-  <polygon points="40,180 40,250 200,180 110,80 " style="fill:yellow;stroke:red;stroke-width:4;"/>
-</svg>
+	var rect_smoke2 = svgElements.append("rect")
+								.attr("x",275)
+								.attr("y",310)
+								.attr("width",40)
+								.attr("height",45)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+    var polygon_smoke2 = svgElements.append("polygon")
+							 .attr("points","275,305 295,285 315,305")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+							 
+	var line_down = svgElements.append("line")
+						 .attr("x1",202)
+						 .attr("y1",445)
+						 .attr("x2",550)
+						 .attr("y2",445)
+						 .style("stroke","black")
+						 .style("stroke-width",2);
 
-  */
-  // Add an SVG
+    var rect_engine_join = svgElements.append("rect")
+								.attr("x",202)
+								.attr("y",355)
+								.attr("width",350)
+								.attr("height",90)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	var ellipse_back = svgElements.append("ellipse")
+			 .attr("cx",550)
+			 .attr("cy",400)
+			 .attr("rx",20)
+			 .attr("ry",45)
+			 .style("fill","teal")
+			 .style("stroke","black")
+			 .style("stroke-width",2);
+			 
+	var rect_engine_2 = svgElements.append("rect")
+								.attr("x",568)
+								.attr("y",380)
+								.attr("width",82)
+								.attr("height",35)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+	var rect_contain = svgElements.append("rect")
+								.attr("x",650)
+								.attr("y",290)
+								.attr("width",200)
+								.attr("height",150)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+	
+	var polygon_contain = svgElements.append("polygon")
+							 .attr("points","650,290 600,250 900,250 850,290")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+	
+	var rect_track = svgElements.append("rect")
+								.attr("x",150)
+								.attr("y",450)
+								.attr("width",750)
+								.attr("height",30)
+								.style("fill","olive")
+								.style("stroke","black")
+								.style("stroke-width",2);
 
-  // Add Rectangles
 
-  // Add Circles
+	var rect_contain_win = svgElements.append("rect")
+								.attr("x",720)
+								.attr("y",325)
+								.attr("width",60)
+								.attr("height",40)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	var circle_con_front = svgElements.append("circle")
+							.attr("cx",690)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+	
+	var circle_con_back = svgElements.append("circle")
+							.attr("cx",810)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+	
+	var circle_engine_front = svgElements.append("circle")
+							.attr("cx",250)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+							
+	var circle_engine_back = svgElements.append("circle")
+							.attr("cx",325)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
 
-  // Add Lines
-
-  // Add Polygons
+	var circle_engine_last = svgElements.append("circle")
+							.attr("cx",480)
+							.attr("cy",446)
+							.attr("r",35)
+							.style("fill","black");
+	
 </script>
