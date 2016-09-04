@@ -1,1 +1,191 @@
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<svg width="50" height="50">
+</svg>
+
+<script>
+  console.log(d3); // test if d3 is loaded
+  
+  //Elements
+  var svgElements = d3.select("body")
+					.append("svg")
+					.attr("width",1000)
+					.attr("height",1000);
+						
+  var ellipse_front = svgElements.append("ellipse")
+			 .attr("cx",200)
+			 .attr("cy",400)
+			 .attr("rx",20)
+			 .attr("ry",45)
+			 .style("fill","teal")
+			 .style("stroke","black")
+			 .style("stroke-width",2);
+
+		  
+   var line_up = svgElements.append("line")
+						 .attr("x1",202)
+						 .attr("y1",355)
+						 .attr("x2",550)
+						 .attr("y2",355)
+						 .style("stroke","black")
+						 .style("stroke-width",2);
+						 
+	var rect_engine = svgElements.append("rect")
+								.attr("x",400)
+								.attr("y",235)
+								.attr("width",145)
+								.attr("height",120)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+    var polygon_engine = svgElements.append("polygon")
+							 .attr("points","400,235 380,220 565,220 545,235")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+						
+	var rect_window = svgElements.append("rect")
+								.attr("x",425)
+								.attr("y",260)
+								.attr("width",100)
+								.attr("height",60)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+	var rect_smoke1 = svgElements.append("rect")
+								.attr("x",220)
+								.attr("y",290)
+								.attr("width",40)
+								.attr("height",65)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+    var polygon_smoke1 = svgElements.append("polygon")
+							 .attr("points","220,285 240,265 260,285")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+	
+
+	var rect_smoke2 = svgElements.append("rect")
+								.attr("x",275)
+								.attr("y",310)
+								.attr("width",40)
+								.attr("height",45)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+    var polygon_smoke2 = svgElements.append("polygon")
+							 .attr("points","275,305 295,285 315,305")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+							 
+	var line_down = svgElements.append("line")
+						 .attr("x1",202)
+						 .attr("y1",445)
+						 .attr("x2",550)
+						 .attr("y2",445)
+						 .style("stroke","black")
+						 .style("stroke-width",2);
+
+    var rect_engine_join = svgElements.append("rect")
+								.attr("x",202)
+								.attr("y",355)
+								.attr("width",350)
+								.attr("height",90)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	var ellipse_back = svgElements.append("ellipse")
+			 .attr("cx",550)
+			 .attr("cy",400)
+			 .attr("rx",20)
+			 .attr("ry",45)
+			 .style("fill","teal")
+			 .style("stroke","black")
+			 .style("stroke-width",2);
+			 
+	var rect_engine_2 = svgElements.append("rect")
+								.attr("x",568)
+								.attr("y",380)
+								.attr("width",82)
+								.attr("height",35)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	
+	var rect_contain = svgElements.append("rect")
+								.attr("x",650)
+								.attr("y",290)
+								.attr("width",200)
+								.attr("height",150)
+								.style("fill","teal")
+								.style("stroke","black")
+								.style("stroke-width",2);
+	
+	var polygon_contain = svgElements.append("polygon")
+							 .attr("points","650,290 600,250 900,250 850,290")
+							 .style("fill","firebrick")
+							 .style("stroke","black")
+							 .style("stroke-width",2);
+	
+	var rect_track = svgElements.append("rect")
+								.attr("x",150)
+								.attr("y",450)
+								.attr("width",750)
+								.attr("height",30)
+								.style("fill","olive")
+								.style("stroke","black")
+								.style("stroke-width",2);
+
+
+	var rect_contain_win = svgElements.append("rect")
+								.attr("x",720)
+								.attr("y",325)
+								.attr("width",60)
+								.attr("height",40)
+								.style("fill","firebrick")
+								.style("stroke","black")
+								.style("stroke-width",2);
+								
+	var circle_con_front = svgElements.append("circle")
+							.attr("cx",690)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+	
+	var circle_con_back = svgElements.append("circle")
+							.attr("cx",810)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+	
+	var circle_engine_front = svgElements.append("circle")
+							.attr("cx",250)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+							
+	var circle_engine_back = svgElements.append("circle")
+							.attr("cx",325)
+							.attr("cy",455)
+							.attr("r",25)
+							.style("fill","black");
+
+	var circle_engine_last = svgElements.append("circle")
+							.attr("cx",480)
+							.attr("cy",446)
+							.attr("r",35)
+							.style("fill","black");
+	
+</script>
 
